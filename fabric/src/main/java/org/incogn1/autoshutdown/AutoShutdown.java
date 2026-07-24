@@ -47,7 +47,7 @@ public class AutoShutdown implements ModInitializer {
 		if (currentTimeMillis - lastOnlineMillis < pollingDelayMillis) return;
 
 		// Still players online check
-		int playerCount = server.getCurrentPlayerCount();
+		int playerCount = server.getPlayerCount();
 		if (playerCount > 0) {
 			if (inDelayedShutdownProcess) {
 				if (loggingEnabled) {
@@ -75,6 +75,6 @@ public class AutoShutdown implements ModInitializer {
 	}
 
 	private void doServerShutdown(MinecraftServer server) {
-		server.stop(false);
+		server.halt(false);
 	}
 }
