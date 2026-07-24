@@ -11,12 +11,12 @@ A Minecraft plugin/mod to automatically stop/shutdown your server after no playe
 - The plugin/mod should now be working 
 
 ## Config
-| value | loader * | explanation |
-| ----- | ------- | ----------- |
-| initial_delay | bukkit, fabric | Specifies the delay before the first check for 'online players'. |
-| polling_delay | fabric | The amount of time between each check for 'online players' |
-| shutdown_delay | bukkit, fabric | Timeframe after the last person has left the server (or after the initial delay has ended), until the server is actually shut down. If a new player joins the server within this timeframe, the shutdown process will be cancelled. |
-| enable_logging | bukkit, fabric | Whether or not basic information should be logged to the console. When disabled, warnings and errors will still be logged but no basic information. |
+| value | loader * | default | explanation |
+| ----- | ------- | ------- | ----------- |
+| initial_delay | bukkit, fabric | 60 seconds | Specifies the delay before the first check for 'online players'. |
+| polling_delay | fabric | 1 second | The amount of time between each check for 'online players' |
+| shutdown_delay | bukkit, fabric | 300 seconds | Timeframe after the last person has left the server (or after the initial delay has ended), until the server is actually shut down. If a new player joins the server within this timeframe, the shutdown process will be cancelled. |
+| enable_logging | bukkit, fabric | true | Whether or not basic information should be logged to the console. When disabled, warnings and errors will still be logged but no basic information. |
 
 _* Depending on the version of the plugin/mod you are using (e.g. bukkit or fabric) some values might or might not be relevant to you and thus not exist within your config file. The plugin/mod itself however will still work perfectly fine :). For the values that do exist, you can find their explanation here._
 
